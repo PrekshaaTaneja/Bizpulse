@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Responsive Website</title>
+    <!-- Link To CSS -->
+    {%load static%}
+    <link rel="stylesheet" href="{% static '/static/style.css' %}">
+    <!-- Icons -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!-- Logo -->
+      <a href="#" class="logo"><i class='bx bx-play'></i>BizPulse</a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+
+      <ul class="menu">
+          <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+          <li><a href="#team" onclick="toggleMenu();">Our Team</a></li>
+          <li><a href="#clients" onclick="toggleMenu();">Agency</a></li>
+          <li><a href="#connect" class="active-btn" onclick="toggleMenu();">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+        <div class="home-text">
+            <h2>Sending Funds Abroad To Cards</h2>
+            <h1>We help you to <br>keep up with you <br>ambition</h1>
+            <p>We help your business keep up with your ambition.</p>
+            <!-- Email -->
+            <div class="email-box">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="email" name="email2" placeholder="Enter your email...">
+                <button style="display: none;" type="submit">Submit</button>
+            </form>
+            <p><i class='bx bxs-fast-forward-circle' ></i></p>
+        </div>
+        </div>
+
+        <div class="home-img">
+            <img src="/static/profile.png" alt="">
+        </div>
+        <!-- Scroll -->
+            <a href="#services" class="scroll-down">
+                <i class='bx bx-mouse'></i>
+                Scroll Down
+                <i class='bx bxs-down-arrow-alt' ></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="heading">
+            <h1>Our Services Define Success!</h1>
+            <h2>Your money wants more money</h2>
+        </div>
+        <div class="service-content">
+            <!-- Box 1 -->
+            <!-- <div class="box">
+                <img src="/static/icon.png" alt="">
+                <span>Paying off Debt</span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus deleniti laudantium vel ullam recusandae sit officiis illum a.</p>
+            </div> -->
+             <!-- Box 2 -->
+            <div class="box">
+                <img src="/static/icon2.png" alt="">
+                <span>Planning Work</span>
+                <p>Strategic Planning and Execution: We will work closely with you to develop a comprehensive strategic plan that aligns with your business objectives.
+                    <br>
+                    Operational Efficiency Optimization: Our consultants will assess your current operational processes and identify areas for improvement to enhance efficiency and productivity. 
+                </p>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <img src="/static/icon3.png" alt="">
+                <span>Our Promises</span>
+                <p>
+                    Risk Management and Business Continuity Planning: Our consultants will assess potential risks to your business and develop comprehensive risk management strategies to mitigate threats and protect your assets.
+                    <br>
+                    Technology Integration and Digital Transformation: We will evaluate your technology infrastructure and recommend solutions to streamline operations, improve customer engagement, and drive innovation
+                </p>
+            </div>
+            <!-- Box 4 -->
+            <div class="box">
+                <img src="/static/icon4.png" alt="">
+                <span>Employee Benefits</span>
+                <p>Financial Management and Debt Repayment Strategies: We will analyze your financial situation and develop customized financial management strategies to improve cash flow, reduce expenses, and prioritize debt repayment.</p>
+            </div>
+            <!-- Box 5 -->
+            <!-- <div class="box">
+                <img src="/static/icon.png" alt="">
+                <span>Our Gurantee</span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus deleniti laudantium vel ullam recusandae sit officiis illum a.</p>
+            </div> -->
+            <!-- Box 6 -->
+            <div class="box">
+                <img src="/static/icon2.png" alt="">
+                <span>Team Benefits</span>
+                <p>Sales and Marketing Enhancement: We will review your sales and marketing strategies to identify opportunities for optimization and growth..</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team">
+        <div class="heading">
+            <h2>Sending Funds Abroad To Cards</h2>
+            <h1>Our financial Experts</h1>
+        </div>
+        <div class="team-content">
+            <!-- Box 1 -->
+            <div class="team-box">
+                <img src="/static/Me.jpg" alt="">
+                <h1>Preksha Taneja</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, vitae!</p>
+                <a href="#">Learn More.</a>
+            </div>
+             <!-- Box 2 -->
+             <div class="team-box">
+                <img src="/static/mnky.jpg" alt="">
+                <h1>Mayank Bansal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, vitae!</p>
+                <a href="#">Learn More.</a>
+            </div>
+            <!-- Box 3 -->
+            <!-- <div class="team-box">
+                <img src="/static/model5.png" alt="">
+                <h1>Robert Fox</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, vitae!</p>
+                <a href="#">Learn More.</a>
+            </div> -->
+        </div>
+        
+    </section>
+    <div class="procedure">
+        <div class="text">
+            <p class="centered" style="font-size: 45px"><b>How it Works?</b></p>
+            <!-- <br> -->
+            <p class="centered2">From identifying the core objectives to helping you gain total control of your business, the entire process involves Five core steps.</p>
+        </div>
+        <img src="/static/Screenshot 1.png" alt="">
+        <img src="/static/Screenshot 2.png" alt="">
+        <img src="/static/Screenshot 3.png" alt="">
+        <img src="/static/Screenshot 4.png" alt="">
+        <img src="/static/Screenshot 5.png" alt="">
+    </div>
+    <!-- CLients -->
+    <!-- <section id="clients"> -->
+        <!-- <div class="heading">
+            <h2>Sending Funds Abroad To Cards</h2>
+            <h1>What's Our Clients Says</h1>
+        </div>
+        <div class="clients-content">
+            <div class="client-box">
+                <img src="/static/model.png" alt="">
+                <h1>Kathrtn Murphy</h1>
+                <h2>CEO Of Agency</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam expedita ipsam incidunt aut quidem iste.</p>
+            </div>
+            <div class="client-box color">
+                <img src="/static/model2.png" alt="">
+                <h1>Courtney Henry</h1>
+                <h2>Director Of Agency</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam expedita ipsam incidunt aut quidem iste.</p>
+            </div>
+        </div> -->
+        
+    <!-- </section> -->
+    <!-- Connect -->
+
+    <div class="connect" id="connect">
+        <p style="color: black; font-size: 25px;">How can we help you?
+        
+        Feel free to share all your queries for the best execution for your business.</p>
+        <br>
+        <br>
+        <h1>Come join us!!</h1>
+        <div class="email-box">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="email" name="email1" placeholder="Enter your email...">
+                <button style="display: none;" type="submit">Submit</button>
+                <a href="#"><i class='bx bxs-fast-forward-circle' ></i></a>
+            </form>
+            
+        </div>
+        <br>
+        <p style="color: black; font-size: 25px;">Submit your request for a one-on-one call.</p>
+        <div class="social">
+            <a href="https://www.facebook.com/mayank.bansal.92167789/"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com/mayankbansal008"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.instagram.com/mayank_bansal_009/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/mayank-bansal-a73a74255/"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Copyright </p>
+      <p><span>♥</span> 2024 All Right Reserved</p>
+    </div>
+    <!-- Link To JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
